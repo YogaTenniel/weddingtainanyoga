@@ -439,38 +439,3 @@
         const accordionToggle = document.getElementById('accordion-toggle');
         const accordionContent = document.getElementById('accordion-content');
         const accordionIcon = document.getElementById('accordion-icon');
-
-        accordionToggle.addEventListener('click', () => {
-            accordionContent.classList.toggle('hidden');
-            accordionIcon.classList.toggle('rotate-180');
-        });
-
-        // Smart Form Conditional Logic: dinner-count > 0
-        const dinnerCountInput = document.getElementById('dinner-count');
-        const conditionalFields = document.getElementById('conditional-fields');
-
-        dinnerCountInput.addEventListener('input', (e) => {
-            const val = parseInt(e.target.value) || 0;
-            if (val > 0) {
-                conditionalFields.classList.remove('hidden');
-            } else {
-                conditionalFields.classList.add('hidden');
-            }
-        });
-
-        // Hidden Iframe Submission Handler
-        let submitted = false;
-
-        function showSuccessModal() {
-            document.getElementById('success-modal').classList.remove('hidden');
-            document.getElementById('rsvp-form').reset();
-            conditionalFields.classList.add('hidden');
-            submitted = false;
-        }
-
-        function closeSuccessModal() {
-            document.getElementById('success-modal').classList.add('hidden');
-        }
-    </script>
-</body>
-</html>
